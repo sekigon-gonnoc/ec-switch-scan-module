@@ -24,7 +24,7 @@
 |15|S2|スキャンライン2|
 |16|S3|スキャンライン3|
 
-## マイコンとの接続
+## 回路の接続
 
 - OUTをアナログ変換できるピンと接続
 - S1~S8をスイッチマトリクスのスキャンライン(COLライン)にそれぞれ接続
@@ -63,10 +63,10 @@
 ### matrix.c
 
 rules.mkに`CUSTOM_MATRIX=lite`を指定して上記の関数を呼び出します  
-このリポジトリのmatrix.cは分割型用のサンプルです
+このリポジトリのmatrix.cは分割型のサンプルです
 
 - 一体型の場合
-  - `matrix_init_custom`と`matrix_scan_custom`に上記の関数を呼び出してください
+  - `matrix_init_custom`と`matrix_scan_custom`からそれぞれ上記の関数を呼び出してください
 
-- 分離型の場合
+- 分割型の場合
   - `CUSTOM_MATRIX=lite`はsplit非対応のため、split用の関数を追加する必要があります。このリポジトリのmatrix.cを参考にしてください
